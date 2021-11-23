@@ -9,7 +9,9 @@ console.log(Book)
 //mongodb://localhost:27017/ih-nodejs-07
 //USAR EN CONEXION REMOTA
 //mongodb+srv://Sinuhe:Adiemus-28@ironhack.b4qtr.mongodb.net/nombreDeLaBaseQue-vamosACrear
-mongoose.connect("mongodb+srv://Sinuhe:Adiemus-28@ironhack.b4qtr.mongodb.net/unaPrueba", {
+require("dotenv").config()
+
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true, //formato nuevo de mongoDB
     useUnifiedTopology: true
 })
